@@ -14,24 +14,39 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D myRigidbody;
     Transform myTransform;
     Animator myAnimator;
-    CapsuleCollider2D myCapsuleCollider;
+    CapsuleCollider2D myBodyCollider;
+    BoxCollider2D myFeetCollider;
 
     float gravityScaleAtStart;
+    bool isAlive = true;
 
     private void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         myTransform = GetComponent<Transform>();
         myAnimator = GetComponent<Animator>();
-        myCapsuleCollider = GetComponent<CapsuleCollider2D>();
+        myBodyCollider = GetComponent<CapsuleCollider2D>();
+        myFeetCollider = GetComponent<BoxCollider2D>();
         gravityScaleAtStart = myRigidbody.gravityScale;
     }
 
     private void Update()
     {
+        if (!isAlive)
+            return;
+
         Run();
         FlipSprite();
         ClimbLadder();
+        Die();
+    }
+
+    private void Die()
+    {
+        if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemies")))
+        {
+            isAlive = false;
+        }
     }
 
     private void FlipSprite()
@@ -43,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void ClimbLadder()
     {
-        if (!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
+        if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
         {
             myAnimator.SetBool("isClimbing", false);
             myRigidbody.gravityScale = gravityScaleAtStart;
@@ -75,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnJump(InputValue value)
     {
-        if (!myCapsuleCollider.IsTouchingLayers(LayerMask .GetMask("Ground")))
+        if (!myFeetCollider.IsTouchingLayers(LayerMask .GetMask("Ground")))
             return;
 
         if (value.isPressed)

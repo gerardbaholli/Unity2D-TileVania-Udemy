@@ -3,7 +3,7 @@ guid: 0c23422fc6b364e1a9f5df800a4e6a68
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,6 +20,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -108,11 +111,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 10
-        y: 4
+        y: 7
         width: 32
-        height: 32
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -129,11 +132,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 4
+        y: 7
         width: 32
-        height: 32
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,11 +153,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 86
-        y: 4
+        y: 7
         width: 32
-        height: 32
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,11 +174,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 124
-        y: 4
+        y: 7
         width: 32
-        height: 32
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,11 +195,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 162
-        y: 4
+        y: 7
         width: 32
-        height: 32
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,11 +216,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 200
-        y: 4
+        y: 7
         width: 32
-        height: 32
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -248,7 +251,6 @@ TextureImporter:
       SPA_Enemy_Right_1: -747967842
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
