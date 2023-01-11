@@ -1,4 +1,4 @@
-# Unity2D-TileVania-Udemy
+# [Unity2D] TileVania
 
 A fast-paced classic Side-Scrolling Platformer using Unity's Tilemap tool.
 
